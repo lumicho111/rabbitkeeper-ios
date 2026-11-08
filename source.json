@@ -1,0 +1,30 @@
+{
+  "name": "RabbitKeeper",
+  "subtitle": "RabbitKeeper iOS 更新源",
+  "identifier": "app.ii.rabbitkeeper.source",
+  "sourceURL": "https://raw.githubusercontent.com/lumicho111/rabbitkeeper-ios/main/source.json",
+  "description": "RabbitKeeper 的 iOS 自签安装与更新",
+  "iconURL": "https://raw.githubusercontent.com/lumicho111/rabbitkeeper-ios/main/icon.png",
+  "apps": [
+    {
+      "name": "RabbitKeeper",
+      "bundleIdentifier": "app.ii.phone",
+      "developerName": "RabbitKeeper",
+      "subtitle": "互动小手机",
+      "localizedDescription": "RabbitKeeper iOS 自签安装版",
+      "iconURL": "https://raw.githubusercontent.com/lumicho111/rabbitkeeper-ios/main/icon.png",
+      "category": "utilities",
+      "versions": [
+        {
+          "version": "1.0.7",
+          "buildVersion": "9",
+          "date": "2026-11-08",
+          "localizedDescription": "Resource 027: notification and UI updates",
+          "downloadURL": "https://github.com/lumicho111/rabbitkeeper-ios/releases/download/ios-1.0.7-b9-r027/RabbitKeeper-ios-1.0.7-b9-r027.ipa",
+          "size": 89472890,
+          "minOSVersion": "13.0"
+        }
+      ]
+    }
+  ]
+}
