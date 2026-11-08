@@ -1,24 +1,27 @@
-# RabbitKeeper iOS build status
+# RabbitKeeper iOS Status (Resource 027)
 
-## Completed
-- Public distribution repository initialized.
-- AltStore Classic source generator script created (not yet used for a live source).
-- Manual macOS unsigned iOS test workflow: `.github/workflows/build-ios-test.yml`.
-- Android APK and Vercel deployment were not changed.
+## Verified
+- `raccoonphonetest` contains the Resource 027 business-code commit.
+- Android release repository `rabbitkeeper-updatededicated` latest published resource commit is 027.
+- Earlier unsigned iOS test build `42457969842` completed successfully.
+- Its IPA was successfully installed using Sideloadly on a tester's iPhone.
+- The duplicate framework Bundle ID problem was fixed and build-side checks passed.
 
-## Not yet completed
-- GitHub Actions macOS build has not been run successfully.
-- IPA has not been signed or tested on a real iPhone.
-- GitHub Releases, AltStore live source and GitHub Pages are not enabled.
+## Prepared
+- Private source workflow `.github/workflows/ios-publish-sidestore.yml` packages iOS app, publishes an IPA to public GitHub Releases, and updates the SideStore-compatible AltSource.
+- A neutral RabbitKeeper icon replaces public-facing Float artwork in this iOS release process.
+- Public `scripts/update-altstore-source.mjs` maintains the update source versions with monotonically increasing build numbers.
+- [SideStore install instructions](SIDESTORE.md) document in-phone updates and data safety.
 
-## Source version warning
-As inspected on 2026-11-08, the connected source repository `lumicho111/raccoonphonetest` has `mobile/version.json` versionName `1.0.7`, versionCode `9`. This has not been confirmed to contain the latest Android 026 changes. Do not publicly release an IPA until the canonical source version is verified.
+## Blockers before the first public release
+1. User must add private source repository secret `RABBITKEEPER_IOS_PUBLISH_TOKEN`, a fine-grained GitHub token with Contents Read and Write for public repository `lumicho111/rabbitkeeper-ios` only.
+2. User must manually run the `Publish RabbitKeeper IPA to SideStore` GitHub workflow.
+3. Verify source and release are accessible, then SideStore install and overlay update on the phone.
 
-## Run the test build
-Go to **Actions → Build unsigned iOS test IPA → Run workflow**. The default source ref is `main`. This only uploads a short-lived Actions artifact, not a public Release.
+## Initial version
+- Resource: 027.
+- App: `app.ii.phone`, version `1.0.7`, build `9`.
+- Next update MUST use a higher iOS build, e.g. 10.
+- Until the first successful release, `source.json` does not exist and the URL is not an active app source.
 
-## Before switching the source repository to Private
-The current test workflow checks out the source as a public repository. Once the source becomes private, configure a read-only GitHub App or deployment key; never paste personal access tokens into public repository files.
-
-## Packaging note
-The test workflow produces a best-effort unsigned IPA from an unsigned Xcode device app. Successful compilation is not proof that AltStore/SideStore can sign and install it. Real-device testing is required.
+Android APK and Vercel were not changed for this iOS workflow.
