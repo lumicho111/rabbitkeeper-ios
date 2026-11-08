@@ -17,6 +17,15 @@
       "versions": [
         {
           "version": "1.0.7",
+          "buildVersion": "10",
+          "date": "2026-11-08",
+          "localizedDescription": "Resource 028: bundled styles, optional plugin, default sounds and private message banners",
+          "downloadURL": "https://github.com/lumicho111/rabbitkeeper-ios/releases/download/ios-1.0.7-b10-r028/RabbitKeeper-ios-1.0.7-b10-r028.ipa",
+          "size": 89810482,
+          "minOSVersion": "13.0"
+        },
+        {
+          "version": "1.0.7",
           "buildVersion": "9",
           "date": "2026-11-08",
           "localizedDescription": "Resource 027: notification and UI updates",
